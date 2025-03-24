@@ -5,10 +5,90 @@
              <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
              <meta http-equiv="X-UA-Compatible" content="ie=edge">
              <title>Document</title>
-             <link rel="stylesheet" href="css/styles.css">
+             <link rel="stylesheet" href="css/style.css">
              <script src="js/script.js"></script>
 </head>
 <body>
+<header>
+    <div class="logo-gourmet">
+        <img src="assets/images/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
+    </div>
+    <h1>GourmetTech</h1>
+    <div class="logo-lune">
+        <img src="assets/images/logo-lune.png" width="40" alt="logo de la lune">
+    </div>
+    <div class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</header>
+<main>
+    <section id="section-recherche">
+        <div>
+            <input placeholder="Rechercher une recette..." type="text">
+            <button>Rechercher</button>
+        </div>
+        <div>
+            <h2>Catégorie</h2>
+            <div>
+                <input type="checkbox" id="check-entre">
+                <label for="check-entre">Entrée</label>
+            </div>
+            <div>
+                <input type="checkbox" id="check-plat">
+                <label for="check-plat">Plat</label>
+            </div>
+            <div>
+                <input type="checkbox" id="check-dessert">
+                <label for="check-dessert">Dessert</label>
+            </div>
+        </div>
+        <div>
+            <h2>Temps</h2>
+            <div>
+                <input type="checkbox" id="check-rapide">
+                <label for="check-rapide">Rapide</label>
+            </div>
+            <div>
+                <input type="checkbox" id="check-moyen">
+                <label for="check-moyen">Moyen</label>
+            </div>
+            <div>
+                <input type="checkbox" id="check-long">
+                <label for="check-long">Long</label>
+            </div>
+        </div>
+    </section>
+    <section id="section-liste-de-recette">
+        <article class="article-tarte-aux-pomme">
+            <div>
+                <img src="assets/images/img-tarte-aux-pommes.jpg" width="100" alt="tarte aux pommes">
+            </div>
+            <h2>Tarte aux pommes</h2>
+            <div>
+                <p class="type-plat">Dessert</p>
+                <p class="type-temps" >60min</p>
+                <p class="type-dificulte">Facile</p>
+            </div>
+            <a href="recette.html">Voir la recette</a>
+        </article>
+        <article class="article-ratatouille-provencale">
+            <div>
+                <img src="assets/images/img-tarte-aux-pommes.jpg" width="100" alt="tarte aux pommes">
+            </div>
+            <h2>Tarte aux pommes</h2>
+            <div>
+                <p class="type-plat">Dessert</p>
+                <p class="type-temps" >60min</p>
+                <p class="type-dificulte">Facile</p>
+            </div>
+            <a href="recette.html">Voir la recette</a>
+        </article>
+    </section>
+</main>
+<footer>
 
+</footer>
 </body>
 </html>
