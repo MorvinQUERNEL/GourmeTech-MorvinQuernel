@@ -1,120 +1,137 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-             <title>GourmeTech-Accueil</title>
-             <link rel="stylesheet" href="css/style.css">
-             <script src="js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GourmeTech-Accueil</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-accueil.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
 <header>
-    <div class="logo-gourmet">
-        <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
-    </div>
-    <h1>GourmeTech</h1>
-    <div class="nuit-jour mode-nuit">
-        <img src="assets/icons/icon-lune.png" width="40" alt="lune">
-    </div>
-    <div class="nuit-jour mode-jour">
-        <img src="assets/icons/icon-soleil.png" width="40" alt="soleil">
-    </div>
-    <div class="burger-menu">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <div class="nav-menu" >
-        <p id="close">✕</p>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="recette.html">Recette</a></li>
-            <li><a href="favoris.html">Mes favoris</a></li>
-            <li><a href="a-propos.html">A propos</a></li>
-        </ul>
-    </div>
+    <nav class="head-nav">
+        <div class="logo-gourmet">
+            <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
+        </div>
+        <h1>GourmeTech</h1>
+        <div class="menu-r">
+            <div class="mode">
+                <div class="nuit-jour mode-nuit show">
+                    <img src="assets/icons/icon-lune.png" width="40" alt="lune">
+                </div>
+                <div class="nuit-jour mode-jour">
+                    <img src="assets/icons/icon-soleil.png" width="40" alt="soleil">
+                </div>
+            </div>
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-menu">
+
+                <div>
+                    <p id="close">✕</p>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="recette.html">Recette</a></li>
+                        <li><a href="favoris.html">Mes favoris</a></li>
+                        <li><a href="a-propos.html">A propos</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
 </header>
 <main>
     <section id="section-recherche">
-        <div>
-            <input placeholder="Rechercher une recette..." type="text">
-            <button>Rechercher</button>
+        <div class="recherche">
+            <input placeholder="Rechercher une recette..." class="input-recherche" type="text">
+            <button class="bouton-recherche">Rechercher</button>
         </div>
-        <div>
+        <article>
             <h2>Catégorie</h2>
-            <div>
-                <input type="checkbox" id="check-entre">
-                <label for="check-entre">Entrée</label>
-            </div>
-            <div>
-                <input type="checkbox" id="check-plat">
-                <label for="check-plat">Plat</label>
-            </div>
-            <div>
-                <input type="checkbox" id="check-dessert">
-                <label for="check-dessert">Dessert</label>
-            </div>
-        </div>
-        <div>
+            <ul>
+                <li>
+                    <input type="checkbox" id="check-entre">
+                    <label for="check-entre">Entrée</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check-plat">
+                    <label for="check-plat">Plat</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check-dessert">
+                    <label for="check-dessert">Dessert</label>
+                </li>
+            </ul>
+        </article>
+        <article>
             <h2>Temps</h2>
-            <div>
-                <input type="checkbox" id="check-rapide">
-                <label for="check-rapide">Rapide</label>
-            </div>
-            <div>
-                <input type="checkbox" id="check-moyen">
-                <label for="check-moyen">Moyen</label>
-            </div>
-            <div>
-                <input type="checkbox" id="check-long">
-                <label for="check-long">Long</label>
-            </div>
-        </div>
+            <ul>
+                <li>
+                    <input type="checkbox" id="check-rapide">
+                    <label for="check-rapide">Rapide</label></li>
+                <li>
+                    <input type="checkbox" id="check-moyen">
+                    <label for="check-moyen">Moyen</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check-long">
+                    <label for="check-long">Long</label>
+                </li>
+            </ul>
+        </article>
     </section>
-    <section id="section-liste-de-recette">
+    <section id="section-liste-de-recettes">
         <article class="article-tarte-aux-pomme">
-            <div>
-                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
+            <div class="contenaire-img">
+                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge show" alt="coeur rouge">
                 <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide" alt="coeur vide">
-                <img src="assets/images/img-tarte-aux-pommes.jpg" width="100" alt="tarte aux pommes">
+                <img src="assets/images/img-tarte-aux-pommes.jpg" width="100" class="img-recette"
+                     alt="tarte aux pommes">
             </div>
             <h2>Tarte aux pommes</h2>
-            <div>
+            <div class="description">
                 <p class="type-plat">Dessert</p>
-                <p class="type-temps" >60min</p>
+                <p class="type-temps">60min</p>
                 <p class="type-dificulte">Facile</p>
             </div>
-            <a href="recette.html">Voir la recette</a>
+            <button>Voir la recette</button>
         </article>
         <article class="article-ratatouille-provencale">
-            <div>
+            <div class="contenaire-img">
                 <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
-                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide" alt="coeur vide">
-                <img src="assets/images/img-ratatouille-provencale.jpg" width="100" alt="ratatouille provencale">
+                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="coeur vide">
+                <img src="assets/images/img-ratatouille-provencale.jpg" width="100" class="img-recette" alt="ratatouille provencale">
             </div>
             <h2>Ratatouille provençale</h2>
-            <div>
+            <div class="description">
                 <p class="type-plat">Plat</p>
-                <p class="type-temps" >45min</p>
+                <p class="type-temps">45min</p>
                 <p class="type-dificulte">Moyen</p>
             </div>
-            <a href="recette.html">Voir la recette</a>
+            <button>Voir la recette</button>
         </article>
         <article class="article-veloute-de-potiron">
-        <div>
-            <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
-            <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide" alt="coeur vide">
-            <img src="assets/images/img-velouté-potiron.jpg" width="100" alt="velouté de potiron">
-        </div>
-        <h2>Velouté de potiron</h2>
-        <div>
-            <p class="type-plat">Entrée</p>
-            <p class="type-temps" >30min</p>
-            <p class="type-dificulte">Facile</p>
-        </div>
-        <a href="recette.html">Voir la recette</a>
-    </article>
+            <div class="contenaire-img">
+                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
+                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="coeur vide">
+                <img src="assets/images/img-velouté-potiron.jpg" width="100" class="img-recette" alt="velouté de potiron">
+            </div>
+            <h2>Velouté de potiron</h2>
+            <div class="description">
+                <p class="type-plat">Entrée</p>
+                <p class="type-temps">30min</p>
+                <p class="type-dificulte">Facile</p>
+            </div>
+            <button>Voir la recette</button>
+        </article>
     </section>
 </main>
 <footer>
@@ -132,7 +149,7 @@
         <p>GourmeTech est une plateforme de recettes culinaires interactive dévelopée dans le cadre d'un projet
             pédagogique</p>
     </div>
-    <p class="copyright">Ⓒ 2025 GourmeTech -  Tous les droits réservés</p>
+    <p class="copyright">Ⓒ 2025 GourmeTech - Tous les droits réservés</p>
 </footer>
 </body>
 </html>
