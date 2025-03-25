@@ -11,6 +11,7 @@ main {
             }
 
             .bouton-recherche {
+                padding-block: 1rem;
                 font-size: 2rem;
                 background-color: var(--primary);
                 border: none;
@@ -78,6 +79,7 @@ main {
             }
 
             h2 {
+                margin-block: 2rem;
                 font-size: 3rem;
             }
 

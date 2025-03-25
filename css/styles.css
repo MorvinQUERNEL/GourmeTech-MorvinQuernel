@@ -16,7 +16,7 @@
 
 header {
     box-shadow: 2px 2px 4px var(--primary-light);
-
+    padding-bottom: 1.5rem;
     .head-nav {
         width: 100%;
         text-align: center;
