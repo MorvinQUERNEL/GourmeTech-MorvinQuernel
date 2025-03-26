@@ -1,0 +1,61 @@
+.page-recette {
+    margin-inline: 20px;
+    box-shadow: 2px 2px 4px var(--primary-light);
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        color: var(--primary);
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .contenaire-img {
+        position: relative;
+
+        .img-recette {
+            width: 100%;
+        }
+
+        .coeur {
+            right: 0;
+            position: absolute;
+            display: none;
+
+            &.show {
+                display: block;
+            }
+
+        }
+
+    }
+
+    .ajout-fav {
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    ul {
+        list-style: none;
+        li {
+            margin-block: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+    p {
+        margin-block: 1rem;
+        font-size: 1.5rem;
+    }
+    strong {
+        color: var(--primary);
+    }
+}
