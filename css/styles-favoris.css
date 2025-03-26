@@ -1,0 +1,72 @@
+.page-favoris {
+
+    padding-bottom: 1rem;
+    margin: 20px;
+    display: grid;
+    gap: 2rem;
+
+    article {
+        text-align: center;
+        border-radius: 10px 10px 0px 0px;
+        overflow: hidden;
+        box-shadow: 2px 2px 4px var(--primary-light);
+        display: none;
+
+        &.show-fav {
+            display: block;
+        }
+
+        .contenaire-img {
+            .img-recette {
+                width: 100%;
+            }
+        }
+
+        h2 {
+            margin-block: 2rem;
+            font-size: 3rem;
+        }
+
+        .description {
+            display: flex;
+            justify-content: start;
+            gap: 1rem;
+            margin-block: 1rem;
+            margin-inline: 2rem;
+
+            p {
+                font-size: 1.5rem;
+                padding: 7px;
+                color: white;
+                border-radius: 15px;
+
+                &.type-plat {
+                    background-color: var(--primary);
+                }
+
+                &.type-temps {
+                    background-color: var(--green);
+                }
+
+                &.type-dificulte {
+                    background-color: var(--blue);
+                }
+            }
+
+        }
+
+        button {
+            margin-inline: 2rem;
+            border-radius: 5px;
+            text-align: center;
+            padding-block: 2rem;
+            border: none;
+            width: 90%;
+            text-decoration: none;
+            background-color: var(--primary);
+            font-size: 3rem;
+            color: white;
+            margin-block: 2rem;
+        }
+    }
+}
