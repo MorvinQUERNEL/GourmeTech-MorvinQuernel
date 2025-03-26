@@ -1,3 +1,10 @@
+#accueil {
+    background-color: var(--grey-light);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--primary);
+}
+
 main {
     #section-recherche {
 
@@ -8,10 +15,12 @@ main {
         .recherche {
             display: grid;
             gap: 1rem;
+
             .input-recherche {
                 padding-block: 1rem;
                 width: 100%;
             }
+
             .bouton-recherche {
                 padding-block: 1rem;
                 font-size: 2rem;
@@ -24,30 +33,33 @@ main {
             }
         }
 
-        article {
-            background-color: var(--grey-light);
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            margin: 20px 50px;
+        .type-recherche {
+            article {
+                background-color: var(--grey-light);
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                margin: 20px 50px;
 
-            h2 {
+                h2 {
 
-                font-size: 2rem;
-            }
+                    font-size: 2rem;
+                }
 
-            ul {
-                list-style: none;
+                ul {
+                    list-style: none;
 
-                li {
+                    li {
 
-                    margin-block: 1rem;
+                        margin-block: 1rem;
 
-                    label {
-                        font-size: 1.7rem;
+                        label {
+                            font-size: 1.7rem;
+                        }
                     }
                 }
             }
         }
+
     }
 
     #section-liste-de-recettes {
@@ -132,19 +144,51 @@ main {
 }
 
 @media (min-width: 768px) {
-    #section-recherche {
-        .recherche {
-            position: relative;
-            margin-inline: 5rem;
-            display: grid;
-            grid-template-columns: 4fr 1fr;
-            /*le css ne prend pas en compte cette modification je ne sais pas pourquoi*/
-            gap: 0;
-            height: 4rem;
-            align-items: center;
-            .bouton-recherche,.input-recherche {
-                height: 100%;
+    main {
+        #section-recherche {
+            .recherche {
+                position: relative;
+                margin-inline: 5rem;
+                display: grid;
+                grid-template-columns: 4fr 1fr;
+                gap: 0;
+                height: 4rem;
+                align-items: center;
+
+                .bouton-recherche, .input-recherche {
+                    height: 100%;
+                }
+
+                .bouton-recherche {
+                    border-radius: 0 0.5rem 0.5rem 0;
+                }
             }
+        }
+
+        #section-liste-de-recettes {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        #section-recherche {
+
+            .type-recherche {
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                article {
+                    margin: 0;
+                    margin-top: 2rem;
+                    margin-left: 5rem;
+                }
+            }
+
+        }
+
+        #section-liste-de-recettes {
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
 }

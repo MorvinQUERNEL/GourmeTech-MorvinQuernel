@@ -9,15 +9,30 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-accueil.css">
+    <link rel="stylesheet" href="css/styles-nuit-jour.css">
 </head>
 <body class="jour">
 <header>
     <nav class="head-nav">
-        <div class="logo-gourmet">
-            <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
+        <div class="titre">
+            <div class="logo-gourmet">
+                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
+            </div>
+            <h1>GourmeTech</h1>
         </div>
-        <h1>GourmeTech</h1>
+
         <div class="menu-r">
+            <div class="nav-menu">
+                <div>
+                    <p id="close">✕</p>
+                    <ul>
+                        <li><a id="accueil" href="index.html">Accueil</a></li>
+                        <li><a id="recette" href="recette.html">Recette</a></li>
+                        <li><a id="mes-favoris" href="favoris.html">Mes favoris</a></li>
+                        <li><a id="a-propos" href="a-propos.html">A propos</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="mode">
                 <div class="nuit-jour mode-nuit show">
                     <img src="assets/icons/icon-lune.png" width="40" alt="lune">
@@ -31,20 +46,6 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <div class="nav-menu">
-
-                <div>
-                    <p id="close">✕</p>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="recette.html">Recette</a></li>
-                        <li><a href="favoris.html">Mes favoris</a></li>
-                        <li><a href="a-propos.html">A propos</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
         </div>
     </nav>
 </header>
@@ -54,55 +55,57 @@
             <input placeholder="Rechercher une recette..." class="input-recherche" type="text">
             <button class="bouton-recherche">Rechercher</button>
         </div>
-        <article>
-            <h2>Catégorie</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" id="check-entre">
-                    <label for="check-entre">Entrée</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check-plat">
-                    <label for="check-plat">Plat</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check-dessert">
-                    <label for="check-dessert">Dessert</label>
-                </li>
-            </ul>
-        </article>
-        <article>
-            <h2>Temps</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" id="check-rapide">
-                    <label for="check-rapide">Rapide</label></li>
-                <li>
-                    <input type="checkbox" id="check-moyen">
-                    <label for="check-moyen">Moyen</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check-long">
-                    <label for="check-long">Long</label>
-                </li>
-            </ul>
-        </article>
-        <article>
-            <h2>Difficulté</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" id="check-facile">
-                    <label for="check-facile">Facile</label></li>
-                <li>
-                    <input type="checkbox" id="check-moyenn">
-                    <label for="check-moyenn">Moyen</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check-difficile">
-                    <label for="check-difficile">Difficile</label>
-                </li>
-            </ul>
-        </article>
+        <div class="type-recherche">
+            <article>
+                <h2>Catégorie</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="check-entre">
+                        <label for="check-entre">Entrée</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check-plat">
+                        <label for="check-plat">Plat</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check-dessert">
+                        <label for="check-dessert">Dessert</label>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h2>Temps</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="check-rapide">
+                        <label for="check-rapide">Rapide</label></li>
+                    <li>
+                        <input type="checkbox" id="check-moyen">
+                        <label for="check-moyen">Moyen</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check-long">
+                        <label for="check-long">Long</label>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h2>Difficulté</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="check-facile">
+                        <label for="check-facile">Facile</label></li>
+                    <li>
+                        <input type="checkbox" id="check-moyenn">
+                        <label for="check-moyenn">Moyen</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check-difficile">
+                        <label for="check-difficile">Difficile</label>
+                    </li>
+                </ul>
+            </article>
+        </div>
     </section>
     <section id="section-liste-de-recettes">
         <article class="article-tarte-aux-pomme">
@@ -124,7 +127,8 @@
             <div class="contenaire-img">
                 <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
                 <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="coeur vide">
-                <img src="assets/images/img-ratatouille-provencale.jpg" width="100" class="img-recette" alt="ratatouille provencale">
+                <img src="assets/images/img-ratatouille-provencale.jpg" width="100" class="img-recette"
+                     alt="ratatouille provencale">
             </div>
             <h2>Ratatouille provençale</h2>
             <div class="description">
@@ -138,7 +142,8 @@
             <div class="contenaire-img">
                 <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
                 <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="coeur vide">
-                <img src="assets/images/img-velouté-potiron.jpg" width="100" class="img-recette" alt="velouté de potiron">
+                <img src="assets/images/img-velouté-potiron.jpg" width="100" class="img-recette"
+                     alt="velouté de potiron">
             </div>
             <h2>Velouté de potiron</h2>
             <div class="description">

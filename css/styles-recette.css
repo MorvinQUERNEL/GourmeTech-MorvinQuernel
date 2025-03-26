@@ -1,5 +1,15 @@
+
+#recette {
+    background-color: var(--grey-light);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--primary);
+}
+
 .page-recette {
+    margin-block: 2rem;
     margin-inline: 20px;
+    padding-bottom: 2rem;
     box-shadow: 2px 2px 4px var(--primary-light);
     h1 {
         text-align: center;
@@ -57,5 +67,25 @@
     }
     strong {
         color: var(--primary);
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .page-recette {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        h1 {
+            grid-column: 1/-1;
+        }
+        .recette-information-generales {
+            text-align: center;
+        }
+        .recette-preparation {
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
