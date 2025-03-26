@@ -13,8 +13,8 @@
     <script src="js/script.js"></script>
 
 </head>
-<body>
-<header class="head-nav">
+<body class="jour">
+<header>
     <nav class="head-nav">
         <div class="logo-gourmet">
             <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
@@ -51,53 +51,64 @@
     </nav>
 </header>
 <main>
-    <h1>À Propos de GourmeTech</h1>
 
-    <h2>Informations sur le site</h2>
-    <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
-        pédagogique. Notre objectif est de fournir une expérience enrichissante pour les amateurs de cuisine en leur
-        offrant des recettes variées et faciles à suivre.</p>
+    <section class="section-infos">
+        <h1><strong> À Propos de GourmeTech</strong></h1>
 
-    <h2>Formulaire de contact</h2>
-    <form name="contactForm" onsubmit="return validateForm()">
-        <div class="form-group">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div class="form-group">
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Envoyer">
-        </div>
-    </form>
+        <h2>Informations sur le site</h2>
+        <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
+            pédagogique. Notre objectif est de fournir une expérience enrichissante pour les amateurs de cuisine en leur
+            offrant des recettes variées et faciles à suivre.</p>
 
-    <h2>FAQ</h2>
-    <div class="faq-item">
-        <details>
-            <summary>Qu'est-ce que GourmeTech ?</summary>
-            <p>GourmeTech est une plateforme interactive dédiée aux recettes culinaires, conçue pour faciliter
-                l'apprentissage et la pratique de la cuisine.</p>
-        </details>
-    </div>
-    <div class="faq-item">
-        <details>
-            <summary>Comment puis-je contribuer à GourmeTech ?</summary>
-            <p>Vous pouvez contribuer en soumettant vos propres recettes ou en laissant des commentaires et des
-                suggestions pour améliorer la plateforme.</p>
-        </details>
-    </div>
-    <div class="faq-item">
-        <details>
-            <summary>Est-ce que GourmeTech est gratuit ?</summary>
-            <p>Oui, GourmeTech est entièrement gratuit. Nous croyons en l'accès libre à la connaissance culinaire.</p>
-        </details>
-    </div>
+        <h2>Formulaire de contact</h2>
+        <form name="contactForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" id="check">
+                <label for="check">J'accepte les conditions rgpd</label>
+            </div>
+            <div class="form-group">
+                <button type="submit"> envoyer </button>
+            </div>
+        </form>
+    </section>
+    <section class="section-faq">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <details>
+                <summary>Qu'est-ce que GourmeTech ?</summary>
+                <p>GourmeTech est une plateforme interactive dédiée aux recettes culinaires, conçue pour faciliter
+                    l'apprentissage et la pratique de la cuisine.</p>
+            </details>
+        </div>
+        <div class="faq-item">
+            <details>
+                <summary>Comment puis-je contribuer à GourmeTech ?</summary>
+                <p>Vous pouvez contribuer en soumettant vos propres recettes ou en laissant des commentaires et des
+                    suggestions pour améliorer la plateforme.</p>
+            </details>
+        </div>
+        <div class="faq-item">
+            <details>
+                <summary>Est-ce que GourmeTech est gratuit ?</summary>
+                <p>Oui, GourmeTech est entièrement gratuit. Nous croyons en l'accès libre à la connaissance culinaire.</p>
+            </details>
+        </div>
+    </section>
+
+
+
 </main>
 <footer>
     <nav class="nav-footer">

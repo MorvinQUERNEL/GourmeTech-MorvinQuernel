@@ -1,10 +1,12 @@
 main {
     #section-recherche {
+
         padding-bottom: 1rem;
         margin: 20px;
         box-shadow: 4px 4px 4px var(--primary-light);
 
         .recherche {
+
             .input-recherche {
                 padding-block: 1rem;
                 width: 100%;
@@ -24,7 +26,9 @@ main {
         }
 
         article {
-
+            background-color: var(--grey-light);
+            padding: 0.5rem;
+            border-radius: 0.5rem;
             margin: 20px 50px;
 
             h2 {
@@ -126,4 +130,8 @@ main {
             }
         }
     }
+}
+
+@media (min-width: 500px) {
+
 }

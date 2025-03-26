@@ -5,6 +5,8 @@
     --blue: #3696DE;
     --primary-light: rgba(230, 127, 34, 0.27);
     --secondary: #b5b4b4;
+    --grey-light: rgba(217, 217, 217, 0.47);
+    --nuit: #3a3939;
     font-size: 10px;
 }
 
@@ -17,8 +19,14 @@
 header {
     box-shadow: 2px 2px 4px var(--primary-light);
     padding-bottom: 1.5rem;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
     .head-nav {
-        width: 100%;
+
+
         text-align: center;
         display: flex;
         justify-content: space-between;
@@ -119,11 +127,15 @@ footer {
     }
     .nav-footer,div {
         margin-bottom: 2rem;
+        p {
+            font-size: 1.3rem;
+        }
         ul {
             list-style: none;
             li {
                 margin-top: 10px;
                 a {
+                    font-size: 1.3rem;
                     text-decoration: none;
                     color: black;
                 }
@@ -138,4 +150,7 @@ footer {
         grid-column: 1/-1;
         color: var(--secondary);
     }
+}
+main {
+    padding-top: 10rem;
 }

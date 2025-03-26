@@ -1,6 +1,16 @@
-#nuit {
+.nuit {
+    background-color: var(--nuit);
+    p,label,h2,summary {
+        color: white;
+    }
+    header {
+        background-color: var(--nuit);
+        .bar {
+            background: white;
+        }
+    }
 
 }
-#jour {
-
+.jour {
+    background-color: white;
 }
