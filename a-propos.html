@@ -22,11 +22,11 @@
 <body class="jour">
 <header>
     <!-- En-tête de la page avec la navigation -->
-    <nav class="head-nav">
+    <nav class="head-nav" aria-label="Navigation principale">
         <div class="titre">
             <!-- Logo et titre du site -->
             <div class="logo-gourmet">
-                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
+                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech" aria-hidden="true">
             </div>
             <h1>GourmeTech</h1>
         </div>
@@ -35,8 +35,8 @@
             <!-- Menu de navigation -->
             <div class="nav-menu">
                 <div>
-                    <p id="close">✕</p>
-                    <ul>
+                    <p id="close" aria-label="Fermer le menu">✕</p>
+                    <ul aria-label="Menu de navigation">
                         <li><a id="accueil" href="index.html">Accueil</a></li>
                         <li><a id="recette" href="recette.html">Recette</a></li>
                         <li><a id="mes-favoris" href="favoris.html">Mes favoris</a></li>
@@ -45,61 +45,61 @@
                 </div>
             </div>
             <!-- Boutons pour changer le mode jour/nuit -->
-            <div class="mode">
-                <div class="nuit-jour mode-nuit show">
-                    <img src="assets/icons/icon-lune.png" width="40" alt="lune">
+            <div class="mode" role="radiogroup" aria-label="Sélection du mode d'affichage">
+                <div class="nuit-jour mode-nuit show" role="radio" aria-checked="false" aria-label="Mode nuit">
+                    <img src="assets/icons/icon-lune.png" width="40" alt="lune" aria-hidden="true">
                 </div>
-                <div class="nuit-jour mode-jour">
-                    <img src="assets/icons/icon-soleil.png" width="40" alt="soleil">
+                <div class="nuit-jour mode-jour" role="radio" aria-checked="true" aria-label="Mode jour">
+                    <img src="assets/icons/icon-soleil.png" width="40" alt="soleil" aria-hidden="true">
                 </div>
             </div>
             <!-- Menu burger pour les appareils mobiles -->
-            <div class="burger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="burger-menu" aria-label="Menu hamburger" role="button" aria-expanded="false">
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
             </div>
         </div>
     </nav>
 </header>
 <main>
     <!-- Section principale contenant les informations à propos -->
-    <section class="section-infos">
-        <h1><strong> À Propos de GourmeTech</strong></h1>
+    <section class="section-infos" aria-labelledby="about-title">
+        <h1 id="about-title"><strong>À Propos de GourmeTech</strong></h1>
 
         <!-- Informations sur le site -->
-        <h2>Informations sur le site</h2>
-        <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
+        <h2 id="site-info-title">Informations sur le site</h2>
+        <p aria-describedby="site-info-title">GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
             pédagogique. Notre objectif est de fournir une expérience enrichissante pour les amateurs de cuisine en leur
             offrant des recettes variées et faciles à suivre.</p>
 
         <!-- Formulaire de contact -->
-        <h2>Formulaire de contact</h2>
-        <form name="contactForm" onsubmit="return validateForm()">
+        <h2 id="contact-form-title">Formulaire de contact</h2>
+        <form name="contactForm" onsubmit="return validateForm()" aria-labelledby="contact-form-title">
             <div class="form-group">
                 <label for="name">Nom :</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" aria-required="true">
             </div>
             <div class="form-group">
                 <label for="email">Email :</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" aria-required="true">
             </div>
             <div class="form-group">
                 <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="4"></textarea>
+                <textarea id="message" name="message" rows="4" aria-required="true"></textarea>
             </div>
             <div>
-                <input type="checkbox" id="check">
-                <label for="check">J'accepte les conditions rgpd</label>
+                <input type="checkbox" id="check" aria-describedby="rgpd-conditions">
+                <label for="check" id="rgpd-conditions">J'accepte les conditions rgpd</label>
             </div>
             <div class="form-group">
-                <button type="submit"> envoyer </button>
+                <button type="submit" aria-label="Envoyer le formulaire de contact"> envoyer </button>
             </div>
         </form>
     </section>
     <!-- Section FAQ -->
-    <section class="section-faq">
-        <h2>FAQ</h2>
+    <section class="section-faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
         <div class="faq-item">
             <details>
                 <summary>Qu'est-ce que GourmeTech ?</summary>
@@ -124,7 +124,7 @@
 </main>
 <footer>
     <!-- Pied de page avec navigation et informations -->
-    <nav class="nav-footer">
+    <nav class="nav-footer" aria-label="Navigation secondaire">
         <h2>Navigation</h2>
         <ul>
             <li><a href="index.html">Accueil</a></li>

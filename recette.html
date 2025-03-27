@@ -22,11 +22,11 @@
 <body class="jour">
 <header>
     <!-- En-tête de la page avec la navigation -->
-    <nav class="head-nav">
+    <nav class="head-nav" aria-label="Navigation principale">
         <div class="titre">
             <!-- Logo et titre du site -->
             <div class="logo-gourmet">
-                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
+                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech" aria-hidden="true">
             </div>
             <h1>GourmeTech</h1>
         </div>
@@ -35,8 +35,8 @@
             <!-- Menu de navigation -->
             <div class="nav-menu">
                 <div>
-                    <p id="close">✕</p>
-                    <ul>
+                    <p id="close" aria-label="Fermer le menu">✕</p>
+                    <ul aria-label="Menu de navigation">
                         <li><a id="accueil" href="index.html">Accueil</a></li>
                         <li><a id="recette" href="recette.html">Recette</a></li>
                         <li><a id="mes-favoris" href="favoris.html">Mes favoris</a></li>
@@ -45,39 +45,39 @@
                 </div>
             </div>
             <!-- Boutons pour changer le mode jour/nuit -->
-            <div class="mode">
-                <div class="nuit-jour mode-nuit show">
+            <div class="mode" role="radiogroup" aria-label="Sélection du mode d'affichage">
+                <div class="nuit-jour mode-nuit show" role="radio" aria-checked="false" aria-label="Mode nuit">
                     <img src="assets/icons/icon-lune.png" width="40" alt="lune">
                 </div>
-                <div class="nuit-jour mode-jour">
+                <div class="nuit-jour mode-jour" role="radio" aria-checked="true" aria-label="Mode jour">
                     <img src="assets/icons/icon-soleil.png" width="40" alt="soleil">
                 </div>
             </div>
             <!-- Menu burger pour les appareils mobiles -->
-            <div class="burger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="burger-menu" aria-label="Menu hamburger" role="button" aria-expanded="false">
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
             </div>
         </div>
     </nav>
 </header>
 <main>
     <!-- Section principale contenant la recette -->
-    <section class="page-recette">
-        <h1>Recette de la Ratatouille Provençale</h1>
-        <div class="contenaire-img">
+    <section class="page-recette" aria-labelledby="recipe-title">
+        <h1 id="recipe-title">Recette de la Ratatouille Provençale</h1>
+        <div class="contenaire-img" aria-label="Image de la recette et options">
             <!-- Images et bouton pour ajouter aux favoris -->
-            <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge show" alt="coeur rouge">
-            <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide" alt="coeur vide">
-            <img src="assets/images/img-ratatouille-provencale.jpg" class="img-recette" width="150" alt="ratatouille">
-            <button class="ajout-fav">Ajouter aux favoris</button>
+            <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge show" alt="coeur rouge" aria-hidden="true">
+            <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide" alt="coeur vide" aria-hidden="true">
+            <img src="assets/images/img-ratatouille-provencale.jpg" class="img-recette" width="150" alt="ratatouille" aria-describedby="recipe-title">
+            <button class="ajout-fav" aria-label="Ajouter la recette aux favoris">Ajouter aux favoris</button>
         </div>
 
         <!-- Informations générales sur la recette -->
         <div class="recette-information-generales">
-            <h2>Informations générales :</h2>
-            <ul>
+            <h2 id="general-info">Informations générales :</h2>
+            <ul aria-labelledby="general-info">
                 <li><strong>Titre :</strong> Ratatouille Provençale</li>
                 <li><strong>Catégorie :</strong> Plat principal, accompagnement</li>
                 <li><strong>Temps de préparation :</strong> 20 minutes</li>
@@ -89,8 +89,8 @@
         <!-- Étapes de préparation de la recette -->
         <div class="recette-preparation">
             <div>
-                <h2>1. Préparation des légumes :</h2>
-                <ul>
+                <h2 id="preparation-step1">1. Préparation des légumes :</h2>
+                <ul aria-labelledby="preparation-step1">
                     <li>Lavez tous les légumes.</li>
                     <li>Coupez l'aubergine, les courgettes et les poivrons en dés ou en rondelles selon votre
                         préférence.
@@ -101,8 +101,8 @@
                 </ul>
             </div>
             <div>
-                <h2>2. Cuisson des légumes :</h2>
-                <ul>
+                <h2 id="preparation-step2">2. Cuisson des légumes :</h2>
+                <ul aria-labelledby="preparation-step2">
                     <li>Dans une grande poêle ou une cocotte, faites chauffer 2 cuillères à soupe d'huile d'olive à feu
                         moyen.
                     </li>
@@ -117,8 +117,8 @@
                 </ul>
             </div>
             <div>
-                <h2>3. Cuisson lente :</h2>
-                <ul>
+                <h2 id="preparation-step3">3. Cuisson lente :</h2>
+                <ul aria-labelledby="preparation-step3">
                     <li>Réduisez le feu à doux, couvrez la poêle ou la cocotte et laissez mijoter pendant environ 30 à
                         40 minutes, en remuant de temps en temps. Les légumes doivent devenir tendres et légèrement
                         caramélisés.
@@ -129,16 +129,16 @@
                 </ul>
             </div>
             <div>
-                <h2>4. Finition :</h2>
-                <ul>
+                <h2 id="preparation-step4">4. Finition :</h2>
+                <ul aria-labelledby="preparation-step4">
                     <li>Une fois les légumes bien cuits, retirez la feuille de laurier et la branche de thym.</li>
                     <li>Ajustez l'assaisonnement avec du sel et du poivre si nécessaire.</li>
                     <li>Arrosez d'un filet d'huile d'olive avant de servir.</li>
                 </ul>
             </div>
             <div>
-                <h2>5. Service :</h2>
-                <p>La ratatouille peut être servie chaude, tiède ou même froide. Elle accompagne parfaitement les
+                <h2 id="preparation-step5">5. Service :</h2>
+                <p aria-labelledby="preparation-step5">La ratatouille peut être servie chaude, tiède ou même froide. Elle accompagne parfaitement les
                     viandes grillées, le poisson ou peut être dégustée seule avec du pain frais.</p>
             </div>
         </div>
@@ -146,7 +146,7 @@
 </main>
 <footer>
     <!-- Pied de page avec navigation et informations -->
-    <nav class="nav-footer">
+    <nav class="nav-footer" aria-label="Navigation secondaire">
         <h2>Navigation</h2>
         <ul>
             <li><a href="index.html">Accueil</a></li>

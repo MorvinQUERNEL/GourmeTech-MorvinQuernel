@@ -64,6 +64,7 @@ header {
             }
 
             .burger-menu {
+                cursor: pointer;
                 .bar {
                     width: 30px; /* Largeur */
                     height: 4px; /* Hauteur */
@@ -93,7 +94,9 @@ header {
                         height: 100%; /* Hauteur complète */
                         background-color: black; /* Fond noir */
                         text-align: right; /* Texte à droite */
-
+                        #close {
+                            cursor: pointer;
+                        }
                         p {
                             margin-right: 10px; /* Marge à droite */
                             font-size: 2rem; /* Grande police */
@@ -104,6 +107,7 @@ header {
                             li {
                                 text-align: left; /* Texte à gauche */
                                 margin-top: 2rem;
+                                padding-left: 5rem;
                                 a {
 
                                     text-decoration: none; /* Pas de décoration */

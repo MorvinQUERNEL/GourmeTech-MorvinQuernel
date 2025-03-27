@@ -71,7 +71,10 @@ main {
         margin: 20px; /* Marge extérieure */
         display: grid; /* Disposition en grille */
         gap: 2rem; /* Espace entre les éléments */
-
+        .sr-only {
+            text-align: center;
+            grid-column: 1/-1;
+        }
         article {
             text-align: center; /* Texte centré */
             border-radius: 10px 10px 0px 0px; /* Coins arrondis */

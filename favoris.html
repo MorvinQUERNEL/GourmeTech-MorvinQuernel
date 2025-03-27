@@ -22,11 +22,11 @@
 <body class="jour">
 <header>
     <!-- En-tête de la page avec la navigation -->
-    <nav class="head-nav">
+    <nav class="head-nav" aria-label="Navigation principale">
         <div class="titre">
             <!-- Logo et titre du site -->
             <div class="logo-gourmet">
-                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
+                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech" aria-hidden="true">
             </div>
             <h1>GourmeTech</h1>
         </div>
@@ -35,8 +35,8 @@
             <!-- Menu de navigation -->
             <div class="nav-menu">
                 <div>
-                    <p id="close">✕</p>
-                    <ul>
+                    <p id="close" aria-label="Fermer le menu">✕</p>
+                    <ul aria-label="Menu de navigation">
                         <li><a id="accueil" href="index.html">Accueil</a></li>
                         <li><a id="recette" href="recette.html">Recette</a></li>
                         <li><a id="mes-favoris" href="favoris.html">Mes favoris</a></li>
@@ -45,73 +45,74 @@
                 </div>
             </div>
             <!-- Boutons pour changer le mode jour/nuit -->
-            <div class="mode">
-                <div class="nuit-jour mode-nuit show">
-                    <img src="assets/icons/icon-lune.png" width="40" alt="lune">
+            <div class="mode" role="radiogroup" aria-label="Sélection du mode d'affichage">
+                <div class="nuit-jour mode-nuit show" role="radio" aria-checked="false" aria-label="Mode nuit">
+                    <img src="assets/icons/icon-lune.png" width="40" alt="lune" aria-hidden="true">
                 </div>
-                <div class="nuit-jour mode-jour">
-                    <img src="assets/icons/icon-soleil.png" width="40" alt="soleil">
+                <div class="nuit-jour mode-jour" role="radio" aria-checked="true" aria-label="Mode jour">
+                    <img src="assets/icons/icon-soleil.png" width="40" alt="soleil" aria-hidden="true">
                 </div>
             </div>
             <!-- Menu burger pour les appareils mobiles -->
-            <div class="burger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="burger-menu" aria-label="Menu hamburger" role="button" aria-expanded="false">
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
             </div>
         </div>
     </nav>
 </header>
 <main>
     <!-- Section principale contenant les recettes favorites -->
-    <section class="page-favoris">
+    <section class="page-favoris" aria-labelledby="favoris-title">
+        <h1 id="favoris-title" class="sr-only">Mes recettes favorites</h1>
         <!-- Article pour une recette favorite -->
-        <article class="article-tarte-aux-pomme show-fav">
+        <article class="article-tarte-aux-pomme show-fav" aria-labelledby="tarte-title">
             <div class="contenaire-img">
-                <img src="assets/images/img-tarte-aux-pommes.jpg" class="img-recette" width="100" alt="tarte aux pommes">
+                <img src="assets/images/img-tarte-aux-pommes.jpg" class="img-recette" width="100" alt="tarte aux pommes" aria-describedby="tarte-title">
             </div>
-            <h2>Tarte aux pommes</h2>
-            <div class="description">
+            <h2 id="tarte-title">Tarte aux pommes</h2>
+            <div class="description" aria-label="Détails de la recette">
                 <p class="type-plat">Dessert</p>
                 <p class="type-temps">60min</p>
                 <p class="type-dificulte">Facile</p>
             </div>
-            <button>Voir la recette</button>
-            <p class="supp">supprimer le favoris</p>
+            <button aria-label="Voir la recette de la tarte aux pommes">Voir la recette</button>
+            <p class="supp" role="button" aria-label="Supprimer la tarte aux pommes des favoris">supprimer le favoris</p>
         </article>
         <!-- Article pour une autre recette favorite -->
-        <article class="article-ratatouille-provencale">
+        <article class="article-ratatouille-provencale" aria-labelledby="ratatouille-title">
             <div class="contenaire-img">
-                <img src="assets/images/img-ratatouille-provencale.jpg" class="img-recette" width="100" alt="ratatouille provencale">
+                <img src="assets/images/img-ratatouille-provencale.jpg" class="img-recette" width="100" alt="ratatouille provencale" aria-describedby="ratatouille-title">
             </div>
-            <h2>Ratatouille provençale</h2>
-            <div class="description">
+            <h2 id="ratatouille-title">Ratatouille provençale</h2>
+            <div class="description" aria-label="Détails de la recette">
                 <p class="type-plat">Plat</p>
                 <p class="type-temps">45min</p>
                 <p class="type-dificulte">Moyen</p>
             </div>
-            <button>Voir la recette</button>
-            <p class="supp">supprimer le favoris</p>
+            <button aria-label="Voir la recette de la ratatouille provençale">Voir la recette</button>
+            <p class="supp" role="button" aria-label="Supprimer la ratatouille provençale des favoris">supprimer le favoris</p>
         </article>
         <!-- Article pour une autre recette favorite -->
-        <article class="article-veloute-de-potiron">
+        <article class="article-veloute-de-potiron" aria-labelledby="veloute-title">
             <div class="contenaire-img">
-                <img src="assets/images/img-velouté-potiron.jpg" class="img-recette" width="100" alt="velouté de potiron">
+                <img src="assets/images/img-velouté-potiron.jpg" class="img-recette" width="100" alt="velouté de potiron" aria-describedby="veloute-title">
             </div>
-            <h2>Velouté de potiron</h2>
-            <div class="description">
+            <h2 id="veloute-title">Velouté de potiron</h2>
+            <div class="description" aria-label="Détails de la recette">
                 <p class="type-plat">Entrée</p>
                 <p class="type-temps">30min</p>
                 <p class="type-dificulte">Facile</p>
             </div>
-            <button>Voir la recette</button>
-            <p class="supp">supprimer le favoris</p>
+            <button aria-label="Voir la recette du velouté de potiron">Voir la recette</button>
+            <p class="supp" role="button" aria-label="Supprimer le velouté de potiron des favoris">supprimer le favoris</p>
         </article>
     </section>
 </main>
 <footer>
     <!-- Pied de page avec navigation et informations -->
-    <nav class="nav-footer">
+    <nav class="nav-footer" aria-label="Navigation secondaire">
         <h2>Navigation</h2>
         <ul>
             <li><a href="index.html">Accueil</a></li>

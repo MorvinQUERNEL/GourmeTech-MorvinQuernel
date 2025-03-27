@@ -21,11 +21,11 @@
 <body class="jour">
 <header>
     <!-- En-tête de la page avec la navigation -->
-    <nav class="head-nav">
+    <nav class="head-nav" aria-label="Navigation principale">
         <div class="titre">
             <!-- Logo et titre du site -->
             <div class="logo-gourmet">
-                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
+                <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmeTech" aria-hidden="true">
             </div>
             <h1>GourmeTech</h1>
         </div>
@@ -34,8 +34,8 @@
             <!-- Menu de navigation -->
             <div class="nav-menu">
                 <div>
-                    <p id="close">✕</p>
-                    <ul>
+                    <p id="close" aria-label="Fermer le menu">✕</p>
+                    <ul aria-label="Menu de navigation">
                         <li><a id="accueil" href="index.html">Accueil</a></li>
                         <li><a id="recette" href="recette.html">Recette</a></li>
                         <li><a id="mes-favoris" href="favoris.html">Mes favoris</a></li>
@@ -44,77 +44,83 @@
                 </div>
             </div>
             <!-- Boutons pour changer le mode jour/nuit -->
-            <div class="mode">
-                <div class="nuit-jour mode-nuit show">
-                    <img src="assets/icons/icon-lune.png" width="40" alt="lune">
+            <div class="mode" role="group" aria-label="Sélecteur de mode d'affichage">
+                <div class="nuit-jour mode-nuit show" aria-pressed="true">
+                    <img src="assets/icons/icon-lune.png" width="40" alt="Mode nuit" aria-hidden="true">
                 </div>
-                <div class="nuit-jour mode-jour">
-                    <img src="assets/icons/icon-soleil.png" width="40" alt="soleil">
+                <div class="nuit-jour mode-jour" aria-pressed="false">
+                    <img src="assets/icons/icon-soleil.png" width="40" alt="Mode jour" aria-hidden="true">
                 </div>
             </div>
             <!-- Menu burger pour les appareils mobiles -->
-            <div class="burger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="burger-menu" aria-label="Menu mobile" role="button" aria-expanded="false" tabindex="0">
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
             </div>
         </div>
     </nav>
 </header>
 <main>
     <!-- Section de recherche de recettes -->
-    <section id="section-recherche">
+    <section id="section-recherche" aria-labelledby="recherche-titre">
+        <h2 id="recherche-titre" class="sr-only">Recherche de recettes</h2>
         <div class="recherche">
-            <input placeholder="Rechercher une recette..." class="input-recherche" type="text">
-            <button class="bouton-recherche">Rechercher</button>
+            <input placeholder="Rechercher une recette..."
+                   class="input-recherche"
+                   type="text"
+                   aria-label="Champ de recherche de recettes">
+            <button class="bouton-recherche" aria-label="Lancer la recherche">Rechercher</button>
         </div>
         <!-- Options de filtrage des recettes -->
-        <div class="type-recherche">
-            <article>
-                <h2>Catégorie</h2>
+        <div class="type-recherche" role="group" aria-label="Filtres de recherche">
+            <article aria-labelledby="categorie-titre">
+                <h2 id="categorie-titre">Catégorie</h2>
                 <ul>
                     <li>
-                        <input type="checkbox" id="check-entre">
+                        <input type="checkbox" id="check-entre" aria-label="Filtrer les entrées">
                         <label for="check-entre">Entrée</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="check-plat">
+                        <input type="checkbox" id="check-plat" aria-label="Filtrer les plats">
                         <label for="check-plat">Plat</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="check-dessert">
+                        <input type="checkbox" id="check-dessert" aria-label="Filtrer les desserts">
                         <label for="check-dessert">Dessert</label>
                     </li>
                 </ul>
             </article>
-            <article>
-                <h2>Temps</h2>
+            <article aria-labelledby="temps-titre">
+                <h2 id="temps-titre">Temps</h2>
                 <ul>
                     <li>
-                        <input type="checkbox" id="check-rapide">
-                        <label for="check-rapide">Rapide (5min a 35min)</label></li>
+                        <input type="checkbox" id="check-rapide" aria-label="Filtrer les recettes rapides">
+                        <label for="check-rapide">Rapide (5min a 35min)</label>
+                    </li>
                     <li>
-                        <input type="checkbox" id="check-moyen">
+                        <input type="checkbox" id="check-moyen" aria-label="Filtrer les recettes de durée moyenne">
                         <label for="check-moyen">Moyen (35min a 55min)</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="check-long">
+                        <input type="checkbox" id="check-long" aria-label="Filtrer les recettes longues">
                         <label for="check-long">Long (plus de 55min)</label>
                     </li>
                 </ul>
             </article>
-            <article>
-                <h2>Difficulté</h2>
+            <article aria-labelledby="difficulte-titre">
+                <h2 id="difficulte-titre">Difficulté</h2>
                 <ul>
                     <li>
-                        <input type="checkbox" id="check-facile">
-                        <label for="check-facile">Facile</label></li>
+                        <input type="checkbox" id="check-facile" aria-label="Filtrer les recettes faciles">
+                        <label for="check-facile">Facile</label>
+                    </li>
                     <li>
-                        <input type="checkbox" id="check-moyenn">
+                        <input type="checkbox" id="check-moyenn" aria-label="Filtrer les recettes de difficulté moyenne">
                         <label for="check-moyenn">Moyen</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="check-difficile">
+                        <input type="checkbox" id="check-difficile" aria-label="Filtrer les recettes difficiles">
                         <label for="check-difficile">Difficile</label>
                     </li>
                 </ul>
@@ -122,57 +128,58 @@
         </div>
     </section>
     <!-- Section de liste des recettes -->
-    <section id="section-liste-de-recettes">
-        <article class="article-tarte-aux-pomme" id="article-tarte-aux-pomme">
+    <section id="section-liste-de-recettes" aria-labelledby="recettes-titre">
+        <h2 id="recettes-titre" class="sr-only">Liste des recettes</h2>
+        <article class="article-tarte-aux-pomme" id="article-tarte-aux-pomme" aria-labelledby="titre-tarte">
             <div class="contenaire-img">
-                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge show" alt="coeur rouge">
-                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide" alt="coeur vide">
+                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge show" alt="Ajouter aux favoris" aria-hidden="true">
+                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide" alt="Retirer des favoris" aria-hidden="true">
                 <img src="assets/images/img-tarte-aux-pommes.jpg" width="100" class="img-recette"
-                     alt="tarte aux pommes">
+                     alt="Image de la tarte aux pommes">
             </div>
-            <h2>Tarte aux pommes</h2>
+            <h2 id="titre-tarte">Tarte aux pommes</h2>
             <div class="description">
-                <p class="type-plat">Dessert</p>
-                <p class="type-temps">60min</p>
-                <p class="type-dificulte">Facile</p>
+                <p class="type-plat" aria-label="Type de plat">Dessert</p>
+                <p class="type-temps" aria-label="Temps de préparation">60min</p>
+                <p class="type-dificulte" aria-label="Niveau de difficulté">Facile</p>
             </div>
-            <button>Voir la recette</button>
+            <button aria-label="Voir la recette de la tarte aux pommes">Voir la recette</button>
         </article>
-        <article class="article-ratatouille-provencale" id="article-ratatouille-provencale">
+        <article class="article-ratatouille-provencale" id="article-ratatouille-provencale" aria-labelledby="titre-ratatouille">
             <div class="contenaire-img">
-                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
-                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="coeur vide">
+                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="Ajouter aux favoris" aria-hidden="true">
+                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="Retirer des favoris" aria-hidden="true">
                 <img src="assets/images/img-ratatouille-provencale.jpg" width="100" class="img-recette"
-                     alt="ratatouille provencale">
+                     alt="Image de la ratatouille provençale">
             </div>
-            <h2>Ratatouille provençale</h2>
+            <h2 id="titre-ratatouille">Ratatouille provençale</h2>
             <div class="description">
-                <p class="type-plat">Plat</p>
-                <p class="type-temps">45min</p>
-                <p class="type-dificulte">Moyen</p>
+                <p class="type-plat" aria-label="Type de plat">Plat</p>
+                <p class="type-temps" aria-label="Temps de préparation">45min</p>
+                <p class="type-dificulte" aria-label="Niveau de difficulté">Moyen</p>
             </div>
-            <button>Voir la recette</button>
+            <button aria-label="Voir la recette de la ratatouille provençale">Voir la recette</button>
         </article>
-        <article class="article-veloute-de-potiron" id="article-veloute-de-potiron">
+        <article class="article-veloute-de-potiron" id="article-veloute-de-potiron" aria-labelledby="titre-veloute">
             <div class="contenaire-img">
-                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
-                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="coeur vide">
-                <img src="assets/images/img-velouté-potiron.jpg" width="100" class="img-recette"
-                     alt="velouté de potiron">
+                <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="Ajouter aux favoris" aria-hidden="true">
+                <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="Retirer des favoris" aria-hidden="true">
+                <img src="assets/images/img-velouté-potiron.jpg" width="100" class="img-recette"
+                     alt="Image du velouté de potiron">
             </div>
-            <h2>Velouté de potiron</h2>
+            <h2 id="titre-veloute">Velouté de potiron</h2>
             <div class="description">
-                <p class="type-plat">Entrée</p>
-                <p class="type-temps">30min</p>
-                <p class="type-dificulte">Facile</p>
+                <p class="type-plat" aria-label="Type de plat">Entrée</p>
+                <p class="type-temps" aria-label="Temps de préparation">30min</p>
+                <p class="type-dificulte" aria-label="Niveau de difficulté">Facile</p>
             </div>
-            <button>Voir la recette</button>
+            <button aria-label="Voir la recette du velouté de potiron">Voir la recette</button>
         </article>
     </section>
 </main>
 <footer>
     <!-- Pied de page avec navigation et informations -->
-    <nav class="nav-footer">
+    <nav class="nav-footer" aria-label="Navigation secondaire">
         <h2>Navigation</h2>
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -190,3 +197,4 @@
 </footer>
 </body>
 </html>
+```
