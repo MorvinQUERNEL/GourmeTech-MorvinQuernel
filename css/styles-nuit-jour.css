@@ -1,13 +1,15 @@
 .nuit {
-
+    transition: all 0.3s ease;
     background-color: var(--nuit);
 
     p, label, h2, summary {
         color: white;
     }
-    li,#favoris-title{
+
+    li, #favoris-title {
         color: white;
     }
+
     header {
         background-color: var(--nuit);
 
@@ -22,9 +24,11 @@
                         }
                     }
 
-                    .bar {
-                        background: white;
-                    }
+
+                }
+
+                .bar {
+                    background: white;
                 }
             }
         }
@@ -44,5 +48,6 @@
 }
 
 .jour {
+    transition: all 0.3s ease;
     background-color: white;
 }
