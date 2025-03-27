@@ -66,6 +66,49 @@ function appliquerFiltres() {
     checkbox.addEventListener('change', appliquerFiltres);
 });
 
+// Fonction pour effectuer une recherche sur les recettes
+function searchRecipes() {
+    // Obtenir la valeur de l'entrée de recherche
+    const searchTerm = document.querySelector('.input-recherche').value.toLowerCase().trim();
+
+    // Sélectionner tous les articles de recettes
+    const recipeArticles = document.querySelectorAll('#section-liste-de-recettes article');
+
+    // Si le terme de recherche est vide, afficher toutes les recettes
+    if (searchTerm === '') {
+        recipeArticles.forEach(article => {
+            article.style.display = 'block';
+        });
+        return;
+    }
+
+    // Parcourir chaque article et vérifier si le terme de recherche correspond
+    recipeArticles.forEach(article => {
+        // Obtenir le contenu textuel de l'article à rechercher
+        const articleText = article.textContent.toLowerCase();
+
+        // Vérifier si le terme de recherche est dans le texte de l'article
+        if (articleText.includes(searchTerm)) {
+            article.style.display = 'block';
+        } else {
+            article.style.display = 'none';
+        }
+    });
+}
+
+// Ajouter un écouteur d'événement au bouton de recherche
+document.querySelector('.bouton-recherche').addEventListener('click', searchRecipes);
+
+// Optionnel : Ajouter un écouteur d'événement pour la touche Entrée dans l'entrée de recherche
+document.querySelector('.input-recherche').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        searchRecipes();
+    }
+});
+document.querySelector('.input-recherche').addEventListener('input', function() {
+    searchRecipes();
+});
+
 
 const coeurs = document.querySelectorAll('.contenaire-img');
 
