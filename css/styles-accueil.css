@@ -9,10 +9,13 @@
 main {
     /* Style pour la section de recherche */
     #section-recherche {
+
         padding-bottom: 1rem; /* Espace en bas */
         margin: 20px; /* Marge extérieure */
         box-shadow: 4px 4px 4px var(--primary-light); /* Ombre légère */
-
+        #recherche-titre {
+            text-align: center;
+        }
         .recherche {
             display: grid; /* Disposition en grille */
             gap: 1rem; /* Espace entre les éléments */
