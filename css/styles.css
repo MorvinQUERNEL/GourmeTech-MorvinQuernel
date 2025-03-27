@@ -103,8 +103,9 @@ header {
                         ul {
                             li {
                                 text-align: left; /* Texte à gauche */
-
+                                margin-top: 2rem;
                                 a {
+
                                     text-decoration: none; /* Pas de décoration */
                                     font-size: 3rem; /* Grande police */
                                     color: var(--primary); /* Couleur primaire */

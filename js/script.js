@@ -24,3 +24,12 @@ if (savedTheme) {
     setTheme(savedTheme);
 }
 
+const burgerMenu = document.querySelector('.burger-menu');
+const navMenu = document.querySelector('.nav-menu');
+const closeMenu = document.querySelector('#close');
+burgerMenu.addEventListener('click', function () {
+    navMenu.classList.add('show');
+})
+closeMenu.addEventListener('click', function () {
+    navMenu.classList.remove('show');
+})
