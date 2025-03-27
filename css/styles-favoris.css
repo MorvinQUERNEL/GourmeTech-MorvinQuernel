@@ -85,11 +85,15 @@
         }
     }
 }
-
+@media (min-width: 768px) {
+    .page-favoris {
+        display: grid; /* Disposition en grille */
+        grid-template-columns: repeat(2, 1fr); /* Quatre colonnes */
+    }
+}
 /* Styles pour les grands écrans */
 @media (min-width: 1024px) {
     .page-favoris {
-        display: grid; /* Disposition en grille */
         grid-template-columns: repeat(4, 1fr); /* Quatre colonnes */
     }
 }

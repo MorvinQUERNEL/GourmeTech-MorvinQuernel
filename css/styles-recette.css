@@ -31,6 +31,7 @@
         }
 
         .coeur {
+            cursor: pointer;
             right: 0; /* Alignement à droite */
             position: absolute; /* Positionnement absolu */
             display: none; /* Masqué par défaut */
@@ -74,7 +75,7 @@
 }
 
 /* Styles pour les grands écrans */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .page-recette {
         display: grid; /* Disposition en grille */
         grid-template-columns: 1fr 1fr; /* Colonnes de la grille */
