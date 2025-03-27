@@ -1,116 +1,114 @@
+/* Variables globales et styles de base */
 :root {
-    font-family: Arial, Helvetica, sans-serif;
-    --primary: #E67F22;
-    --green: #7DDEA6;
-    --blue: #3696DE;
-    --primary-light: rgba(230, 127, 34, 0.27);
-    --secondary: #b5b4b4;
-    --grey-light: rgba(217, 217, 217, 0.47);
-    --nuit: #3a3939;
-    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif; /* Police de caractères */
+    --primary: #E67F22; /* Couleur primaire */
+    --green: #7DDEA6; /* Couleur verte */
+    --blue: #3696DE; /* Couleur bleue */
+    --primary-light: rgba(230, 127, 34, 0.27); /* Couleur primaire légère */
+    --secondary: #b5b4b4; /* Couleur secondaire */
+    --grey-light: rgba(217, 217, 217, 0.47); /* Couleur grise légère */
+    --nuit: #302d2d; /* Couleur de nuit */
+    font-size: 10px; /* Taille de base de la police */
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Boîte de dimensionnement */
+    margin: 0; /* Pas de marge */
+    padding: 0; /* Pas de remplissage */
 }
 
+/* Style pour l'en-tête */
 header {
-    box-shadow: 2px 2px 4px var(--primary-light);
-    padding-bottom: 1.5rem;
-    background-color: white;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    top: 0;
+    box-shadow: 2px 2px 4px var(--primary-light); /* Ombre légère */
+    padding-bottom: 1.5rem; /* Espace en bas */
+    background-color: white; /* Fond blanc */
+    position: fixed; /* Position fixe */
+    z-index: 2; /* Priorité d'affichage */
+    width: 100%; /* Largeur complète */
+    top: 0; /* En haut de la page */
 
     .head-nav {
-
-        margin-inline: 2rem;
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
+        margin-inline: 2rem; /* Marge horizontale */
+        text-align: center; /* Texte centré */
+        display: flex; /* Disposition flexible */
+        justify-content: space-between; /* Espacement entre les éléments */
+        align-items: center; /* Alignement vertical */
+        gap: 1rem; /* Espace entre les éléments */
+        flex-wrap: wrap; /* Retour à la ligne */
 
         .titre {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            display: flex; /* Disposition flexible */
+            align-items: center; /* Alignement vertical */
+            gap: 1rem; /* Espace entre les éléments */
         }
 
         h1, h2 {
-            font-size: 3rem;
-            color: var(--primary);
+            font-size: 3rem; /* Grande police */
+            color: var(--primary); /* Couleur primaire */
         }
 
         .menu-r {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            display: flex; /* Disposition flexible */
+            align-items: center; /* Alignement vertical */
+            gap: 1rem; /* Espace entre les éléments */
 
             .mode {
                 .nuit-jour {
-                    display: none;
+                    display: none; /* Masqué par défaut */
+                    cursor: pointer; /* Curseur pointeur */
 
                     &.show {
-                        display: block;
+                        display: block; /* Affiché avec la classe 'show' */
                     }
                 }
-
             }
 
             .burger-menu {
-
                 .bar {
-                    width: 30px;
-                    height: 4px;
-                    background-color: black;
-                    margin: 5px 0;
-                    transition: 0.4s;
+                    width: 30px; /* Largeur */
+                    height: 4px; /* Hauteur */
+                    background-color: black; /* Fond noir */
+                    margin: 5px 0; /* Marge verticale */
+                    transition: 0.4s; /* Transition douce */
                 }
             }
 
             .nav-menu {
-
-                display: none;
+                display: none; /* Masqué par défaut */
 
                 &.show {
-                    z-index: 1;
-                    display: block;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    text-align: center;
-                    background-color: rgba(0, 0, 0, 0.5);
+                    z-index: 1; /* Priorité d'affichage */
+                    display: block; /* Affiché avec la classe 'show' */
+                    position: fixed; /* Position fixe */
+                    top: 0; /* En haut */
+                    left: 0; /* À gauche */
+                    right: 0; /* À droite */
+                    bottom: 0; /* En bas */
+                    text-align: center; /* Texte centré */
+                    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
 
                     div {
-                        padding-top: 10px;
-                        width: 70%;
-                        height: 100%;
-                        background-color: black;
-                        text-align: right;
+                        padding-top: 10px; /* Espace en haut */
+                        width: 70%; /* Largeur */
+                        height: 100%; /* Hauteur complète */
+                        background-color: black; /* Fond noir */
+                        text-align: right; /* Texte à droite */
 
                         p {
-                            margin-right: 10px;
-                            font-size: 2rem;
-                            color: var(--primary);
+                            margin-right: 10px; /* Marge à droite */
+                            font-size: 2rem; /* Grande police */
+                            color: var(--primary); /* Couleur primaire */
                         }
 
                         ul {
                             li {
-                                text-align: left;
+                                text-align: left; /* Texte à gauche */
 
                                 a {
-                                    text-decoration: none;
-                                    font-size: 3rem;
-                                    color: var(--primary);
+                                    text-decoration: none; /* Pas de décoration */
+                                    font-size: 3rem; /* Grande police */
+                                    color: var(--primary); /* Couleur primaire */
                                 }
-
                             }
                         }
                     }
@@ -118,98 +116,100 @@ header {
             }
         }
     }
-
 }
 
+/* Style pour le pied de page */
 footer {
-    border-top: 2px solid var(--primary-light);
-    padding-top: 1rem;
-    padding-inline: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: left;
+    border-top: 2px solid var(--primary-light); /* Bordure en haut */
+    padding-top: 1rem; /* Espace en haut */
+    padding-inline: 20px; /* Marge horizontale */
+    display: grid; /* Disposition en grille */
+    grid-template-columns: 1fr 1fr; /* Colonnes de la grille */
+    text-align: left; /* Texte à gauche */
 
     h2 {
-        margin-bottom: 10px;
-        font-size: 2rem;
-        color: var(--primary);
+        margin-bottom: 10px; /* Marge en bas */
+        font-size: 2rem; /* Grande police */
+        color: var(--primary); /* Couleur primaire */
     }
 
     .nav-footer, div {
-        margin-bottom: 2rem;
+        margin-bottom: 2rem; /* Marge en bas */
 
         p {
-            font-size: 1.3rem;
+            font-size: 1.3rem; /* Police moyenne */
         }
 
         ul {
-            list-style: none;
+            list-style: none; /* Pas de style de liste */
 
             li {
-                margin-top: 10px;
+                margin-top: 10px; /* Marge en haut */
 
                 a {
-                    font-size: 1.3rem;
-                    text-decoration: none;
-                    color: black;
+                    font-size: 1.3rem; /* Police moyenne */
+                    text-decoration: none; /* Pas de décoration */
+                    color: black; /* Texte noir */
                 }
             }
         }
-
     }
 
     .copyright {
-        border-top: 1px solid var(--primary-light);
-        padding-top: 20px;
-        text-align: center;
-        grid-column: 1/-1;
-        color: var(--secondary);
+        border-top: 1px solid var(--primary-light); /* Bordure en haut */
+        padding-top: 20px; /* Espace en haut */
+        text-align: center; /* Texte centré */
+        grid-column: 1/-1; /* Colonne complète */
+        color: var(--secondary); /* Couleur secondaire */
     }
 }
 
+/* Style pour le contenu principal */
 main {
-    padding-top: 10rem;
+    padding-top: 10rem; /* Espace en haut */
 }
 
+/* Styles pour les grands écrans */
 @media (min-width: 1024px) {
     header {
-        position: relative;
+        position: relative; /* Position relative */
 
         .head-nav {
             .menu-r {
                 .burger-menu {
-                    display: none;
+                    display: none; /* Masqué */
                 }
 
                 .nav-menu {
-                    display: inline;
-                    margin-right: 10rem;
+                    display: inline; /* Affiché en ligne */
+                    margin-right: 10rem; /* Marge à droite */
+
                     div {
                         p {
-                            display: none;
+                            display: none; /* Masqué */
                         }
 
                         ul {
-                            display: flex;
-                            list-style: none;
-                            gap: 2rem;
+                            display: flex; /* Disposition flexible */
+                            list-style: none; /* Pas de style de liste */
+                            gap: 2rem; /* Espace entre les éléments */
+
                             li {
                                 a {
-                                    font-weight: bold;
-                                    font-size: 2rem;
-                                    color: black;
-                                    text-decoration: none;
+                                    font-weight: bold; /* Texte en gras */
+                                    font-size: 2rem; /* Grande police */
+                                    color: black; /* Texte noir */
+                                    text-decoration: none; /* Pas de décoration */
                                 }
                             }
                         }
                     }
-
                 }
             }
         }
     }
 
     main {
-        padding-top: 0;
+        padding-top: 0; /* Pas d'espace en haut */
     }
 }

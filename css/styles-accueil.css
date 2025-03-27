@@ -1,194 +1,199 @@
+/* Style pour le lien d'accueil */
 #accueil {
-    background-color: var(--grey-light);
-    padding: 1rem;
-    border-radius: 1rem;
-    color: var(--primary);
+    background-color: var(--grey-light); /* Fond clair */
+    padding: 1rem; /* Espace interne */
+    border-radius: 1rem; /* Coins arrondis */
+    color: var(--primary); /* Texte coloré */
 }
 
 main {
+    /* Style pour la section de recherche */
     #section-recherche {
-
-        padding-bottom: 1rem;
-        margin: 20px;
-        box-shadow: 4px 4px 4px var(--primary-light);
+        padding-bottom: 1rem; /* Espace en bas */
+        margin: 20px; /* Marge extérieure */
+        box-shadow: 4px 4px 4px var(--primary-light); /* Ombre légère */
 
         .recherche {
-            display: grid;
-            gap: 1rem;
+            display: grid; /* Disposition en grille */
+            gap: 1rem; /* Espace entre les éléments */
 
             .input-recherche {
-                padding-block: 1rem;
-                width: 100%;
+                padding-block: 1rem; /* Espace vertical */
+                width: 100%; /* Largeur complète */
+                font-size: 1.8rem;
             }
 
             .bouton-recherche {
-                padding-block: 1rem;
-                font-size: 2rem;
-                background-color: var(--primary);
-                border: none;
-                color: white;
-                width: 100%;
-                display: block;
-                border-radius: 5px;
+                cursor: pointer; /* Curseur pointeur */
+                padding-block: 1rem; /* Espace vertical */
+                font-size: 2rem; /* Grande police */
+                background-color: var(--primary); /* Fond coloré */
+                border: none; /* Pas de bordure */
+                color: white; /* Texte blanc */
+                width: 100%; /* Largeur complète */
+                border-radius: 5px; /* Coins arrondis */
             }
         }
 
         .type-recherche {
             article {
-                background-color: var(--grey-light);
-                padding: 0.5rem;
-                border-radius: 0.5rem;
-                margin: 20px 50px;
+                background-color: var(--grey-light); /* Fond clair */
+                padding: 0.5rem; /* Espace interne */
+                border-radius: 0.5rem; /* Coins arrondis */
+                margin: 20px 50px; /* Marge extérieure */
 
                 h2 {
-
-                    font-size: 2rem;
+                    font-size: 2rem; /* Grande police */
                 }
 
                 ul {
-                    list-style: none;
+                    list-style: none; /* Pas de style de liste */
 
                     li {
+                        margin-block: 1rem; /* Espace vertical */
 
-                        margin-block: 1rem;
+                        input, label {
+                            cursor: pointer; /* Curseur pointeur */
+                        }
 
                         label {
-                            font-size: 1.7rem;
+                            font-size: 1.7rem; /* Grande police */
                         }
                     }
                 }
             }
         }
-
     }
 
+    /* Style pour la section liste de recettes */
     #section-liste-de-recettes {
-        padding-bottom: 1rem;
-        margin: 20px;
-        display: grid;
-        gap: 2rem;
+        padding-bottom: 1rem; /* Espace en bas */
+        margin: 20px; /* Marge extérieure */
+        display: grid; /* Disposition en grille */
+        gap: 2rem; /* Espace entre les éléments */
 
         article {
-            text-align: center;
-            border-radius: 10px 10px 0px 0px;
-            overflow: hidden;
-            box-shadow: 2px 2px 4px var(--primary-light);
+            text-align: center; /* Texte centré */
+            border-radius: 10px 10px 0px 0px; /* Coins arrondis */
+            overflow: hidden; /* Masque le débordement */
+            box-shadow: 2px 2px 4px var(--primary-light); /* Ombre légère */
 
             .contenaire-img {
-                position: relative;
+                position: relative; /* Positionnement relatif */
 
                 .coeur {
-                    right: 0;
-                    position: absolute;
-                    display: none;
+                    cursor: pointer; /* Curseur pointeur */
+                    right: 0; /* Alignement à droite */
+                    position: absolute; /* Positionnement absolu */
+                    display: none; /* Masqué par défaut */
 
                     &.show {
-                        display: block;
+                        display: block; /* Affiché avec la classe 'show' */
                     }
-
                 }
 
                 .img-recette {
-                    width: 100%;
+                    width: 100%; /* Largeur complète */
                 }
             }
 
             h2 {
-                margin-block: 2rem;
-                font-size: 3rem;
+                margin-block: 2rem; /* Espace vertical */
+                font-size: 3rem; /* Grande police */
             }
 
             .description {
-                display: flex;
-                justify-content: start;
-                gap: 1rem;
-                margin-block: 1rem;
-                margin-inline: 2rem;
+                display: flex; /* Disposition flexible */
+                justify-content: start; /* Alignement au début */
+                gap: 1rem; /* Espace entre les éléments */
+                margin-block: 1rem; /* Espace vertical */
+                margin-inline: 2rem; /* Espace horizontal */
 
                 p {
-                    font-size: 1.5rem;
-                    padding: 7px;
-                    color: white;
-                    border-radius: 15px;
+                    font-size: 1.5rem; /* Grande police */
+                    padding: 7px; /* Espace interne */
+                    color: white; /* Texte blanc */
+                    border-radius: 15px; /* Coins arrondis */
 
                     &.type-plat {
-                        background-color: var(--primary);
+                        background-color: var(--primary); /* Fond coloré */
                     }
 
                     &.type-temps {
-                        background-color: var(--green);
+                        background-color: var(--green); /* Fond vert */
                     }
 
                     &.type-dificulte {
-                        background-color: var(--blue);
+                        background-color: var(--blue); /* Fond bleu */
                     }
                 }
-
             }
 
             button {
-                margin-inline: 2rem;
-                border-radius: 5px;
-                text-align: center;
-                padding-block: 2rem;
-                border: none;
-                width: 90%;
-                text-decoration: none;
-                background-color: var(--primary);
-                font-size: 3rem;
-                color: white;
-                margin-block: 2rem;
+                cursor: pointer; /* Curseur pointeur */
+                margin-inline: 2rem; /* Espace horizontal */
+                border-radius: 5px; /* Coins arrondis */
+                text-align: center; /* Texte centré */
+                padding-block: 2rem; /* Espace vertical */
+                border: none; /* Pas de bordure */
+                width: 90%; /* Largeur */
+                text-decoration: none; /* Pas de décoration de texte */
+                background-color: var(--primary); /* Fond coloré */
+                font-size: 3rem; /* Grande police */
+                color: white; /* Texte blanc */
+                margin-block: 2rem; /* Espace vertical */
             }
         }
     }
 }
 
+/* Styles pour les écrans de taille moyenne et plus */
 @media (min-width: 768px) {
     main {
         #section-recherche {
             .recherche {
-                position: relative;
-                margin-inline: 5rem;
-                display: grid;
-                grid-template-columns: 4fr 1fr;
-                gap: 0;
-                height: 4rem;
-                align-items: center;
+                position: relative; /* Positionnement relatif */
+                margin-inline: 5rem; /* Marge horizontale */
+                display: grid; /* Disposition en grille */
+                grid-template-columns: 4fr 1fr; /* Colonnes de la grille */
+                gap: 0; /* Pas d'espace entre les éléments */
+                height: 4rem; /* Hauteur fixe */
+                align-items: center; /* Alignement vertical au centre */
 
                 .bouton-recherche, .input-recherche {
-                    height: 100%;
+                    height: 100%; /* Hauteur complète */
                 }
 
                 .bouton-recherche {
-                    border-radius: 0 0.5rem 0.5rem 0;
+                    border-radius: 0 0.5rem 0.5rem 0; /* Coins arrondis */
                 }
             }
         }
 
         #section-liste-de-recettes {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr; /* Colonnes de la grille */
         }
     }
 }
 
+/* Styles pour les grands écrans */
 @media (min-width: 1024px) {
     main {
         #section-recherche {
-
             .type-recherche {
-                display: grid;
-                grid-template-columns: repeat(5,1fr);
+                display: grid; /* Disposition en grille */
+                grid-template-columns: repeat(5,1fr); /* Colonnes de la grille */
+
                 article {
-                    margin: 0;
-                    margin-top: 2rem;
-                    margin-left: 5rem;
+                    margin: 0; /* Pas de marge */
+                    margin-top: 2rem; /* Marge en haut */
+                    margin-left: 5rem; /* Marge à gauche */
                 }
             }
-
         }
 
         #section-liste-de-recettes {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr; /* Colonnes de la grille */
         }
     }
 }

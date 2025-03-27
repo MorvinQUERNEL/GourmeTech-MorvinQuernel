@@ -1,86 +1,92 @@
+/* Style pour le lien des favoris */
 #mes-favoris {
-    background-color: var(--grey-light);
-    padding: 1rem;
-    border-radius: 1rem;
-    color: var(--primary);
+    background-color: var(--grey-light); /* Fond clair */
+    padding: 1rem; /* Espace interne */
+    border-radius: 1rem; /* Coins arrondis */
+    color: var(--primary); /* Texte coloré */
 }
 
 .page-favoris {
-
-    padding-bottom: 1rem;
-    margin: 20px;
-    display: grid;
-    gap: 2rem;
+    padding-bottom: 1rem; /* Espace en bas */
+    margin: 20px; /* Marge extérieure */
+    display: grid; /* Disposition en grille */
+    gap: 2rem; /* Espace entre les éléments */
 
     article {
-        text-align: center;
-        border-radius: 10px 10px 0px 0px;
-        overflow: hidden;
-        box-shadow: 2px 2px 4px var(--primary-light);
-        display: none;
+        text-align: center; /* Texte centré */
+        border-radius: 10px 10px 0px 0px; /* Coins arrondis */
+        overflow: hidden; /* Masque le débordement */
+        box-shadow: 2px 2px 4px var(--primary-light); /* Ombre légère */
+        display: none; /* Masqué par défaut */
 
+        .supp {
+            font-size: 1.5rem;
+            color: red;
+            cursor: pointer;
+            text-decoration: underline;
+        }
         &.show-fav {
-            display: block;
+            display: block; /* Affiché avec la classe 'show-fav' */
         }
 
         .contenaire-img {
             .img-recette {
-                width: 100%;
+                width: 100%; /* Largeur complète */
             }
         }
 
         h2 {
-            margin-block: 2rem;
-            font-size: 3rem;
+            margin-block: 2rem; /* Espace vertical */
+            font-size: 3rem; /* Grande police */
         }
 
         .description {
-            display: flex;
-            justify-content: start;
-            gap: 1rem;
-            margin-block: 1rem;
-            margin-inline: 2rem;
+            display: flex; /* Disposition flexible */
+            justify-content: start; /* Alignement au début */
+            gap: 1rem; /* Espace entre les éléments */
+            margin-block: 1rem; /* Espace vertical */
+            margin-inline: 2rem; /* Espace horizontal */
 
             p {
-                font-size: 1.5rem;
-                padding: 7px;
-                color: white;
-                border-radius: 15px;
+                font-size: 1.5rem; /* Grande police */
+                padding: 7px; /* Espace interne */
+                color: white; /* Texte blanc */
+                border-radius: 15px; /* Coins arrondis */
 
                 &.type-plat {
-                    background-color: var(--primary);
+                    background-color: var(--primary); /* Fond coloré */
                 }
 
                 &.type-temps {
-                    background-color: var(--green);
+                    background-color: var(--green); /* Fond vert */
                 }
 
                 &.type-dificulte {
-                    background-color: var(--blue);
+                    background-color: var(--blue); /* Fond bleu */
                 }
             }
-
         }
 
         button {
-            margin-inline: 2rem;
-            border-radius: 5px;
-            text-align: center;
-            padding-block: 2rem;
-            border: none;
-            width: 90%;
-            text-decoration: none;
-            background-color: var(--primary);
-            font-size: 3rem;
-            color: white;
-            margin-block: 2rem;
+            margin-inline: 2rem; /* Espace horizontal */
+            border-radius: 5px; /* Coins arrondis */
+            text-align: center; /* Texte centré */
+            padding-block: 2rem; /* Espace vertical */
+            border: none; /* Pas de bordure */
+            width: 90%; /* Largeur */
+            text-decoration: none; /* Pas de décoration de texte */
+            background-color: var(--primary); /* Fond coloré */
+            font-size: 3rem; /* Grande police */
+            color: white; /* Texte blanc */
+            margin-block: 2rem; /* Espace vertical */
         }
     }
 }
 
+/* Styles pour les grands écrans */
 @media (min-width: 1024px) {
     .page-favoris {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: grid; /* Disposition en grille */
+        grid-template-columns: repeat(4, 1fr); /* Quatre colonnes */
     }
 }

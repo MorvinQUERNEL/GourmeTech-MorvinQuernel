@@ -1,20 +1,29 @@
 <!doctype html>
 <html lang="fr">
 <head>
+    <!-- Déclaration du type de document et de la langue -->
     <meta charset="UTF-8">
+    <!-- Configuration de la vue pour les appareils mobiles -->
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Compatibilité avec Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Titre de la page -->
     <title>GourmeTech-Accueil</title>
+    <!-- Liens vers les fichiers CSS pour le style -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-accueil.css">
     <link rel="stylesheet" href="css/styles-nuit-jour.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/script-accueil.js" defer></script>
 </head>
 <body class="jour">
 <header>
+    <!-- En-tête de la page avec la navigation -->
     <nav class="head-nav">
         <div class="titre">
+            <!-- Logo et titre du site -->
             <div class="logo-gourmet">
                 <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
             </div>
@@ -22,6 +31,7 @@
         </div>
 
         <div class="menu-r">
+            <!-- Menu de navigation -->
             <div class="nav-menu">
                 <div>
                     <p id="close">✕</p>
@@ -33,6 +43,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- Boutons pour changer le mode jour/nuit -->
             <div class="mode">
                 <div class="nuit-jour mode-nuit show">
                     <img src="assets/icons/icon-lune.png" width="40" alt="lune">
@@ -41,6 +52,7 @@
                     <img src="assets/icons/icon-soleil.png" width="40" alt="soleil">
                 </div>
             </div>
+            <!-- Menu burger pour les appareils mobiles -->
             <div class="burger-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -50,11 +62,13 @@
     </nav>
 </header>
 <main>
+    <!-- Section de recherche de recettes -->
     <section id="section-recherche">
         <div class="recherche">
             <input placeholder="Rechercher une recette..." class="input-recherche" type="text">
             <button class="bouton-recherche">Rechercher</button>
         </div>
+        <!-- Options de filtrage des recettes -->
         <div class="type-recherche">
             <article>
                 <h2>Catégorie</h2>
@@ -78,14 +92,14 @@
                 <ul>
                     <li>
                         <input type="checkbox" id="check-rapide">
-                        <label for="check-rapide">Rapide</label></li>
+                        <label for="check-rapide">Rapide (5min a 35min)</label></li>
                     <li>
                         <input type="checkbox" id="check-moyen">
-                        <label for="check-moyen">Moyen</label>
+                        <label for="check-moyen">Moyen (35min a 55min)</label>
                     </li>
                     <li>
                         <input type="checkbox" id="check-long">
-                        <label for="check-long">Long</label>
+                        <label for="check-long">Long (plus de 55min)</label>
                     </li>
                 </ul>
             </article>
@@ -107,8 +121,9 @@
             </article>
         </div>
     </section>
+    <!-- Section de liste des recettes -->
     <section id="section-liste-de-recettes">
-        <article class="article-tarte-aux-pomme">
+        <article class="article-tarte-aux-pomme" id="article-tarte-aux-pomme">
             <div class="contenaire-img">
                 <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge show" alt="coeur rouge">
                 <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide" alt="coeur vide">
@@ -123,7 +138,7 @@
             </div>
             <button>Voir la recette</button>
         </article>
-        <article class="article-ratatouille-provencale">
+        <article class="article-ratatouille-provencale" id="article-ratatouille-provencale">
             <div class="contenaire-img">
                 <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
                 <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="coeur vide">
@@ -138,7 +153,7 @@
             </div>
             <button>Voir la recette</button>
         </article>
-        <article class="article-veloute-de-potiron">
+        <article class="article-veloute-de-potiron" id="article-veloute-de-potiron">
             <div class="contenaire-img">
                 <img src="assets/icons/icon-coeur-rouge.png" width="40" class="coeur rouge" alt="coeur rouge">
                 <img src="assets/icons/icon-coeur-vide.png" width="40" class="coeur vide show" alt="coeur vide">
@@ -156,6 +171,7 @@
     </section>
 </main>
 <footer>
+    <!-- Pied de page avec navigation et informations -->
     <nav class="nav-footer">
         <h2>Navigation</h2>
         <ul>
@@ -167,7 +183,7 @@
     </nav>
     <div>
         <h2>À propos de GourmeTech</h2>
-        <p>GourmeTech est une plateforme de recettes culinaires interactive dévelopée dans le cadre d'un projet
+        <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
             pédagogique</p>
     </div>
     <p class="copyright">Ⓒ 2025 GourmeTech - Tous les droits réservés</p>

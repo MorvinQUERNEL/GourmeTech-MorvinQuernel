@@ -1,91 +1,96 @@
-
+/* Style pour la section recette */
 #recette {
-    background-color: var(--grey-light);
-    padding: 1rem;
-    border-radius: 1rem;
-    color: var(--primary);
+    background-color: var(--grey-light); /* Fond clair */
+    padding: 1rem; /* Espace interne */
+    border-radius: 1rem; /* Coins arrondis */
+    color: var(--primary); /* Texte coloré */
 }
 
 .page-recette {
-    margin-block: 2rem;
-    margin-inline: 20px;
-    padding-bottom: 2rem;
-    box-shadow: 2px 2px 4px var(--primary-light);
+    margin-block: 2rem; /* Espace vertical */
+    margin-inline: 20px; /* Marge horizontale */
+    padding-bottom: 2rem; /* Espace en bas */
+    box-shadow: 2px 2px 4px var(--primary-light); /* Ombre légère */
+
     h1 {
-        text-align: center;
-        font-size: 3rem;
-        color: var(--primary);
+        text-align: center; /* Texte centré */
+        font-size: 3rem; /* Grande police */
+        color: var(--primary); /* Couleur primaire */
     }
 
     h2 {
-        text-align: center;
-        font-size: 2.5rem;
+        text-align: center; /* Texte centré */
+        font-size: 2.5rem; /* Grande police */
     }
 
     .contenaire-img {
-        position: relative;
+        position: relative; /* Positionnement relatif */
 
         .img-recette {
-            width: 100%;
+            width: 100%; /* Largeur complète */
         }
 
         .coeur {
-            right: 0;
-            position: absolute;
-            display: none;
+            right: 0; /* Alignement à droite */
+            position: absolute; /* Positionnement absolu */
+            display: none; /* Masqué par défaut */
 
             &.show {
-                display: block;
+                display: block; /* Affiché avec la classe 'show' */
             }
-
         }
-
     }
 
     .ajout-fav {
-        display: block;
-        margin: auto;
-        margin-top: 1rem;
-        text-align: center;
-        font-size: 2rem;
-        padding: 1rem 2rem;
-        background-color: var(--primary);
-        color: white;
-        border: none;
-        border-radius: 5px;
-    }
-    ul {
-        list-style: none;
-        li {
-            margin-block: 1rem;
-            font-size: 1.5rem;
-        }
-    }
-    p {
-        margin-block: 1rem;
-        font-size: 1.5rem;
-    }
-    strong {
-        color: var(--primary);
+        display: block; /* Affichage en bloc */
+        margin: auto; /* Centré */
+        margin-top: 1rem; /* Espace en haut */
+        text-align: center; /* Texte centré */
+        font-size: 2rem; /* Grande police */
+        padding: 1rem 2rem; /* Espace interne */
+        background-color: var(--primary); /* Fond coloré */
+        color: white; /* Texte blanc */
+        border: none; /* Pas de bordure */
+        border-radius: 5px; /* Coins arrondis */
     }
 
+    ul {
+        list-style: none; /* Pas de style de liste */
+
+        li {
+            margin-block: 1rem; /* Espace vertical */
+            font-size: 1.5rem; /* Grande police */
+        }
+    }
+
+    p {
+        margin-block: 1rem; /* Espace vertical */
+        font-size: 1.5rem; /* Grande police */
+    }
+
+    strong {
+        color: var(--primary); /* Texte coloré */
+    }
 }
 
+/* Styles pour les grands écrans */
 @media (min-width: 1024px) {
     .page-recette {
+        display: grid; /* Disposition en grille */
+        grid-template-columns: 1fr 1fr; /* Colonnes de la grille */
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         h1 {
-            grid-column: 1/-1;
+            grid-column: 1/-1; /* Colonne complète */
         }
+
         .recette-information-generales {
-            text-align: center;
+            text-align: center; /* Texte centré */
         }
+
         .recette-preparation {
-            grid-column: 1/-1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-column: 1/-1; /* Colonne complète */
+            display: grid; /* Disposition en grille */
+            grid-template-columns: 1fr 1fr; /* Colonnes de la grille */
         }
     }
 }

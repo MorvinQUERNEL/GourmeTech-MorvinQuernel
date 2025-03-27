@@ -1,21 +1,30 @@
 <!doctype html>
 <html lang="fr">
 <head>
+    <!-- Déclaration du type de document et de la langue -->
     <meta charset="UTF-8">
+    <!-- Configuration de la vue pour les appareils mobiles -->
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Compatibilité avec Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Titre de la page -->
     <title>GourmeTech-Favoris</title>
+    <!-- Liens vers les fichiers CSS pour le style -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-favoris.css">
     <link rel="stylesheet" href="css/styles-nuit-jour.css">
-    <script src="js/script.js"></script>
+    <!-- Lien vers le fichier JavaScript pour les fonctionnalités interactives -->
+    <script src="js/script.js" defer></script>
+    <script src="js/script-favoris.js" defer></script>
 </head>
 <body class="jour">
 <header>
+    <!-- En-tête de la page avec la navigation -->
     <nav class="head-nav">
         <div class="titre">
+            <!-- Logo et titre du site -->
             <div class="logo-gourmet">
                 <img src="assets/icons/logo-gourmetTech.png" width="40" alt="logo de GourmetTech ">
             </div>
@@ -23,6 +32,7 @@
         </div>
 
         <div class="menu-r">
+            <!-- Menu de navigation -->
             <div class="nav-menu">
                 <div>
                     <p id="close">✕</p>
@@ -34,6 +44,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- Boutons pour changer le mode jour/nuit -->
             <div class="mode">
                 <div class="nuit-jour mode-nuit show">
                     <img src="assets/icons/icon-lune.png" width="40" alt="lune">
@@ -42,6 +53,7 @@
                     <img src="assets/icons/icon-soleil.png" width="40" alt="soleil">
                 </div>
             </div>
+            <!-- Menu burger pour les appareils mobiles -->
             <div class="burger-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -51,7 +63,9 @@
     </nav>
 </header>
 <main>
+    <!-- Section principale contenant les recettes favorites -->
     <section class="page-favoris">
+        <!-- Article pour une recette favorite -->
         <article class="article-tarte-aux-pomme show-fav">
             <div class="contenaire-img">
                 <img src="assets/images/img-tarte-aux-pommes.jpg" class="img-recette" width="100" alt="tarte aux pommes">
@@ -63,8 +77,9 @@
                 <p class="type-dificulte">Facile</p>
             </div>
             <button>Voir la recette</button>
-            <p>supprimer le favoris</p>
+            <p class="supp">supprimer le favoris</p>
         </article>
+        <!-- Article pour une autre recette favorite -->
         <article class="article-ratatouille-provencale">
             <div class="contenaire-img">
                 <img src="assets/images/img-ratatouille-provencale.jpg" class="img-recette" width="100" alt="ratatouille provencale">
@@ -76,8 +91,9 @@
                 <p class="type-dificulte">Moyen</p>
             </div>
             <button>Voir la recette</button>
-            <p>supprimer le favoris</p>
+            <p class="supp">supprimer le favoris</p>
         </article>
+        <!-- Article pour une autre recette favorite -->
         <article class="article-veloute-de-potiron">
             <div class="contenaire-img">
                 <img src="assets/images/img-velouté-potiron.jpg" class="img-recette" width="100" alt="velouté de potiron">
@@ -89,11 +105,12 @@
                 <p class="type-dificulte">Facile</p>
             </div>
             <button>Voir la recette</button>
-            <p>supprimer le favoris</p>
+            <p class="supp">supprimer le favoris</p>
         </article>
     </section>
 </main>
 <footer>
+    <!-- Pied de page avec navigation et informations -->
     <nav class="nav-footer">
         <h2>Navigation</h2>
         <ul>
@@ -105,7 +122,7 @@
     </nav>
     <div>
         <h2>À propos de GourmeTech</h2>
-        <p>GourmeTech est une plateforme de recettes culinaires interactive dévelopée dans le cadre d'un projet
+        <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
             pédagogique</p>
     </div>
     <p class="copyright">Ⓒ 2025 GourmeTech - Tous les droits réservés</p>

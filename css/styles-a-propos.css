@@ -1,65 +1,77 @@
+/* Style pour le lien "À propos" */
 #a-propos {
-    background-color: var(--grey-light);
-    padding: 1rem;
-    border-radius: 1rem;
-    color: var(--primary);
+    background-color: var(--grey-light); /* Fond clair */
+    padding: 1rem; /* Espace interne */
+    border-radius: 1rem; /* Coins arrondis */
+    color: var(--primary); /* Texte coloré */
 }
+
 main {
-    margin-inline: 2rem;
+    margin-inline: 2rem; /* Marge horizontale */
+
     h1 {
-        color: var(--primary);
-        font-size: 2.5rem;
+        color: var(--primary); /* Texte coloré */
+        font-size: 2.5rem; /* Grande police */
     }
+
     h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Grande police */
     }
 
     .section-infos {
-        text-align: center;
-        box-shadow: 2px 2px 4px var(--primary-light);
-        padding: 0.5rem;
-        margin-top: 2rem;
+        text-align: center; /* Texte centré */
+        box-shadow: 2px 2px 4px var(--primary-light); /* Ombre légère */
+        padding: 0.5rem; /* Espace interne */
+        margin-top: 2rem; /* Espace en haut */
+
         p {
-            margin-block: 1rem;
-            font-size: 1.5rem;
+            margin-block: 1rem; /* Espace vertical */
+            font-size: 1.5rem; /* Grande police */
         }
+
         form {
             label {
-                font-size: 1.5rem;
+                font-size: 1.5rem; /* Grande police */
             }
+
             button {
-                font-size: 1.5rem;
-                color: white;
-                margin-top: 0.5rem;
-                border: none;
-                background-color: var(--primary);
-                padding: 1rem 2rem;
-                border-radius: 0.2rem;
+                font-size: 1.5rem; /* Grande police */
+                color: white; /* Texte blanc */
+                margin-top: 0.5rem; /* Espace en haut */
+                border: none; /* Pas de bordure */
+                background-color: var(--primary); /* Fond coloré */
+                padding: 1rem 2rem; /* Espace interne */
+                border-radius: 0.2rem; /* Coins arrondis */
             }
-            input:not([type="checkbox"]),textarea {
-                height: 3rem;
-                display: block;
-                width: 100%;
-                margin-block: 1rem;
+
+            input:not([type="checkbox"]), textarea {
+                height: 3rem; /* Hauteur fixe */
+                display: block; /* Affichage en bloc */
+                width: 100%; /* Largeur complète */
+                margin-block: 1rem; /* Espace vertical */
             }
         }
     }
+
     .section-faq {
-        margin-block: 1.5rem;
+        margin-block: 1.5rem; /* Espace vertical */
+
         summary {
-            font-size: 2rem;
+            font-size: 2rem; /* Grande police */
         }
+
         p {
-            font-size: 1.5rem;
+            font-size: 1.5rem; /* Grande police */
         }
     }
 }
 
+/* Styles pour les grands écrans */
 @media (min-width: 1024px) {
     main {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 2rem;
+        display: grid; /* Disposition en grille */
+        gap: 1rem; /* Espace entre les éléments */
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+        margin-bottom: 2rem; /* Espace en bas */
     }
 }

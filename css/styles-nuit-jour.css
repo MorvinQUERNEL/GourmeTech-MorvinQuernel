@@ -1,16 +1,45 @@
 .nuit {
     background-color: var(--nuit);
-    p,label,h2,summary {
+
+    p, label, h2, summary {
         color: white;
     }
+
     header {
         background-color: var(--nuit);
-        .bar {
-            background: white;
+
+        .head-nav {
+            .menu-r {
+                .nav-menu {
+                    ul {
+                        li {
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+
+                    .bar {
+                        background: white;
+                    }
+                }
+            }
         }
     }
 
+    footer {
+        .nav-footer {
+            ul {
+                li {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
 }
+
 .jour {
     background-color: white;
 }
